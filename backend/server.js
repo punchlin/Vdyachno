@@ -29,8 +29,10 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB connected"))
   .catch(err => console.log(err));
 
+const path = require("path");
+
 app.get("/", (req, res) => {
-  res.send("API працює 🚀");
+  res.sendFile(path.join(__dirname, "../index.html"));
 });
 
 // Статика HTML 
