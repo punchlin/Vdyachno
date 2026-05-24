@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Особистий кабінет - Vdyachno</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ХЕДЕР (Без жовтої кнопки!) -->
+<header class="header">
+    <div class="container">
+        <!-- Логотип -->
+        <a href="#" class="logo">
+            <img src="images/logo-white.png" alt="Логотип" class="logo-img">
+            <div class="logo-text">
+                Vdyachno
+                <span>Разом зможемо більше</span>
+            </div>
+        </a>
+
+        <!-- Навігація -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Головна</a></li>
+                <li><a href="about.html">Про нас</a></li>
+                <li><a href="campaigns.html">Збори</a></li>
+                <li><a href="gifts.html">Подарунки</a></li>
+            </ul>
+        </nav>
+
+        <!-- Права частина хедера -->
+        <div class="header-actions">
+            <a href="volunteers.html">Волонтерам</a>
+            <a href="sponsors.html">Спонсорам</a>
+
+            <!-- Іконка користувача -->
+            <a href="register.html" class="user-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24">
+                    <g fill="none" fill-rule="evenodd">
+                        <path
+                            d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                        <path fill="#FDC92F"
+                            d="M16 14a5 5 0 0 1 4.995 4.783L21 19v1a2 2 0 0 1-1.85 1.995L19 22H5a2 2 0 0 1-1.995-1.85L3 20v-1a5 5 0 0 1 4.783-4.995L8 14zm0 2H8a3 3 0 0 0-2.995 2.824L5 19v1h14v-1a3 3 0 0 0-2.824-2.995zM12 2a5 5 0 1 1 0 10a5 5 0 0 1 0-10m0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6" />
+                    </g>
+                </svg>
+            </a>
+
+            <a href="#" class="btn btn-primary">Підтримати</a>
+            <div class="lang-switch">UA</div>
+        </div>
+    </div>
+</header>
+
+    <!-- КОНТЕНТ КАБІНЕТУ -->
+    <main class="profile-page">
+
+        <!-- Привітання -->
+        <div class="profile-header">
+            <h1>Вітаємо! <span id="userName"></span></h1>
+            <p>Тут ви можете переглядати та редагувати свої дані, а також відстежувати історію донатів</p>
+        </div>
+
+        <!-- Верхній блок (Фото + Дані + Статистика) -->
+        <div class="profile-top-section">
+
+            <!-- 1. Фото -->
+            <div class="profile-photo-col">
+                <h3 class="section-title">Фото профілю</h3>
+                <div class="avatar-circle" id="avatarWrapper">
+                    <img id="avatarImage" src="images/default-avatar.png">
+                    <input type="file" id="avatarInput" hidden>
+                    <div class="camera-btn">📷</div>
+                </div>
+            </div>
+
+            <!-- 2. Адреса -->
+            <div class="profile-address">
+                <h3>Адреса доставки</h3>
+                <p id="profileAddress">Не вказано</p>
+            </div>
+
+            <!-- 3. Статистика (Зелена картка) -->
+            <div class="profile-stats-col">
+                <div class="stats-card">
+                    <p class="stats-text">Ви з нами з</p>
+                    <div class="stats-date">
+                        <span class="calendar-icon">📅</span> <span id="userCreated"></span>
+                    </div>
+                    <hr class="stats-divider">
+                    <div class="donation-summary">
+                        <h3>Загальна сума донатів</h3>
+                        <div class="donation-total" id="totalDonations">
+                            0 ₴
+                        </div>
+                    </div>
+                    <p class="stats-thanks">Дякуємо, що ви з нами 💛</p>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="main-divider">
+
+        <!-- Нижній блок (Історія донатів) -->
+        <div class="donations-table">
+        
+            <div class="donations-header">
+                <div>Дата</div>
+                <div>Збір</div>
+                <div>Сума</div>
+                <div>Спосіб оплати</div>
+                <div>Подарунок</div>
+            </div>
+        
+            <div id="donationsContainer"></div>
+        
+        </div>
+
+    </main>
+
+    <!-- Футер (Нижня частина) -->
+    <footer class="footer">
+        <div class="container footer-grid">
+    
+            <div class="footer-logo">
+                <div class="logo-group">
+                    <img src="images/logo-white.png" alt="Лого" class="footer-logo-img">
+                    <div class="logo-text">
+                        <h3>Vdyachno</h3>
+                        <p>Разом зможемо більше</p>
+                    </div>
+                </div>
+    
+                <!-- Соцмережі через SVG код -->
+                <div class="socials">
+                    <a href="https://www.instagram.com/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M13.028 2c1.125.003 1.696.009 2.189.023l.194.007c.224.008.445.018.712.03c1.064.05 1.79.218 2.427.465c.66.254 1.216.598 1.772 1.153a4.9 4.9 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.012.266.022.487.03.712l.006.194c.015.492.021 1.063.023 2.188l.001.746v1.31a79 79 0 0 1-.023 2.188l-.006.194c-.008.225-.018.446-.03.712c-.05 1.065-.22 1.79-.466 2.428a4.9 4.9 0 0 1-1.153 1.772a4.9 4.9 0 0 1-1.772 1.153c-.637.247-1.363.415-2.427.465l-.712.03l-.194.006c-.493.014-1.064.021-2.189.023l-.746.001h-1.309a78 78 0 0 1-2.189-.023l-.194-.006a63 63 0 0 1-.712-.031c-1.064-.05-1.79-.218-2.428-.465a4.9 4.9 0 0 1-1.771-1.153a4.9 4.9 0 0 1-1.154-1.772c-.247-.637-.415-1.363-.465-2.428l-.03-.712l-.005-.194A79 79 0 0 1 2 13.028v-2.056a79 79 0 0 1 .022-2.188l.007-.194c.008-.225.018-.446.03-.712c.05-1.065.218-1.79.465-2.428A4.9 4.9 0 0 1 3.68 3.678a4.9 4.9 0 0 1 1.77-1.153c.638-.247 1.363-.415 2.428-.465c.266-.012.488-.022.712-.03l.194-.006a79 79 0 0 1 2.188-.023zM12 7a5 5 0 1 0 0 10a5 5 0 0 0 0-10m0 2a3 3 0 1 1 .001 6a3 3 0 0 1 0-6m5.25-3.5a1.25 1.25 0 0 0 0 2.5a1.25 1.25 0 0 0 0-2.5" />
+                        </svg></a>
+    
+                    <a href="https://www.facebook.com/?locale=uk_UA"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M15.402 21v-6.966h2.333l.349-2.708h-2.682V9.599c0-.784.218-1.319 1.342-1.319h1.434V5.857a19 19 0 0 0-2.09-.107c-2.067 0-3.482 1.262-3.482 3.58v1.996h-2.338v2.708h2.338V21H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1z" />
+                        </svg></a>
+    
+                    <a href="https://www.youtube.com/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M12.244 4c.534.003 1.87.016 3.29.073l.504.022c1.429.067 2.857.183 3.566.38c.945.266 1.687 1.04 1.938 2.022c.4 1.56.45 4.602.456 5.339l.001.152v.174c-.007.737-.057 3.78-.457 5.339c-.254.985-.997 1.76-1.938 2.022c-.709.197-2.137.313-3.566.38l-.504.023c-1.42.056-2.756.07-3.29.072l-.235.001h-.255c-1.13-.007-5.856-.058-7.36-.476c-.944-.266-1.687-1.04-1.938-2.022c-.4-1.56-.45-4.602-.456-5.339v-.326c.006-.737.056-3.78.456-5.339c.254-.985.997-1.76 1.939-2.021c1.503-.419 6.23-.47 7.36-.476zM9.999 8.5v7l6-3.5z" />
+                        </svg></a>
+    
+                    <a href="https://web.telegram.org/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M2.148 11.81q7.87-3.429 10.497-4.522c4.999-2.079 6.037-2.44 6.714-2.452c.15-.003.482.034.698.21c.182.147.232.347.256.487s.054.459.03.708c-.27 2.847-1.443 9.754-2.04 12.942c-.252 1.348-.748 1.8-1.23 1.845c-1.045.096-1.838-.69-2.85-1.354c-1.585-1.039-2.48-1.686-4.018-2.699c-1.777-1.171-.625-1.815.388-2.867c.265-.275 4.87-4.464 4.96-4.844c.01-.048.021-.225-.084-.318c-.105-.094-.26-.062-.373-.036q-.239.054-7.592 5.018q-1.079.74-1.952.721c-.643-.014-1.88-.363-2.798-.662c-1.128-.367-2.024-.56-1.946-1.183q.061-.486 1.34-.994" />
+                        </svg></a>
+    
+                </div>
+            </div>
+    
+    
+            <div class="footer-links">
+                <h4>Меню</h4>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="about.html">Про нас</a></li>
+                    <li><a href="campaigns.html">Збори</a></li>
+                    <li><a href="gifts.html">Подарунки</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-links">
+                <h4>Підтримка</h4>
+                <ul>
+                    <li><a href="#">Контакти</a></li>
+                    <li><a href="#">Правила</a></li>
+                    <li><a href="#">Політика кофідеційності</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom container">
+            <p>© 2024 Vdyachno. Усі права захищені. Розроблено як кваліфікаційна робота.</p>
+            <div class="lang-selector">Українська ▾</div>
+        </div>
+    </footer>
+
+    <script>
+        const token = localStorage.getItem("token");
+
+        if (!token) {
+            window.location.href = "login.html";
+        }
+
+        async function loadUser() {
+            try {
+                const response = await fetch("http://localhost:5000/api/users/me", {
+                    headers: {
+                        Authorization: "Bearer " + token
+                    }
+                });
+
+                const user = await response.json();
+
+                // Імʼя
+                document.getElementById("userName").innerText =
+                    user.firstName + (user.lastName ? " " + user.lastName : "");
+
+                // Дата реєстрації
+                document.getElementById("userCreated").innerText =
+                    new Date(user.createdAt).toLocaleDateString("uk-UA");
+
+                // Аватар
+                if (user.avatar) {
+                    document.getElementById("avatarImage").src =
+                        `http://localhost:5000${user.avatar}`;
+                }
+
+                if (user.deliveryAddress) {
+                    document.getElementById("profileAddress").innerText =
+                    `${user.deliveryAddress.name}, 
+                    ${user.deliveryAddress.city}, 
+                    відд. ${user.deliveryAddress.branch}, 
+                    ${user.deliveryAddress.phone}`;
+                }
+
+            } catch (error) {
+                console.error("Помилка завантаження користувача:", error);
+            }
+        }
+
+        // Клік по аватару
+        document.getElementById("avatarWrapper").addEventListener("click", () => {
+            document.getElementById("avatarInput").click();
+        });
+
+        // Завантаження нового аватару
+        document.getElementById("avatarInput").addEventListener("change", async function () {
+
+            if (!this.files[0]) return;
+
+            const formData = new FormData();
+            formData.append("avatar", this.files[0]);
+
+            try {
+                await fetch("http://localhost:5000/api/users/avatar", {
+                    method: "PUT",
+                    headers: {
+                        Authorization: "Bearer " + token
+                    },
+                    body: formData
+                });
+
+                loadUser(); // оновити дані після завантаження
+
+            } catch (error) {
+                console.error("Помилка завантаження аватару:", error);
+            }
+        });
+
+        loadUser();
+
+        async function loadMyDonations() {
+
+                const token = localStorage.getItem("token");
+
+                const response = await fetch("http://localhost:5000/api/donations/my", {
+                    headers: {
+                        Authorization: "Bearer " + token
+                    }
+                });
+
+                const donations = await response.json();
+
+                const container = document.getElementById("donationsContainer");
+                container.innerHTML = "";
+
+                let total = 0;
+
+                donations.forEach(d => {
+
+                    total += d.amount;
+
+                    const row = document.createElement("div");
+                    row.className = "donation-row";
+
+                    row.innerHTML = `
+            <div>${new Date(d.createdAt).toLocaleDateString("uk-UA")}</div>
+            <div>${d.fundraiser?.title || ""}</div>
+            <div>${d.amount} ₴</div>
+            <div>${d.paymentMethod}</div>
+            <div>${d.gift ? d.giftStatus : "-"}</div>
+        `;
+
+                    container.appendChild(row);
+                });
+
+                // 🔥 Оновлюємо загальну суму
+                document.getElementById("totalDonations").innerText = total + " ₴";
+            }
+
+            loadMyDonations();
+    </script>
+</body>
+
+</html>

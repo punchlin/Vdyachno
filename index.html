@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vdyachno - Разом зможемо більше</title>
+
+    <!-- Підключення шрифту Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Підключення файлу стилів -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- ХЕДЕР -->
+    <header class="header">
+        <div class="container">
+            <!-- Логотип -->
+            <a href="#" class="logo">
+                <img src="images/logo-white.png" alt="Логотип" class="logo-img">
+                <div class="logo-text">
+                    Vdyachno
+                    <span>Разом зможемо більше</span>
+                </div>
+            </a>
+
+            <!-- Навігація -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Головна</a></li>
+                    <li><a href="about.html">Про нас</a></li>
+                    <li><a href="campaigns.html">Збори</a></li>
+                    <li><a href="gifts.html">Подарунки</a></li>
+                </ul>
+            </nav>
+
+            <!-- Права частина хедера -->
+            <div class="header-actions">
+                <a href="volunteers.html">Волонтерам</a>
+                <a href="sponsors.html">Спонсорам</a>
+
+                <!-- Іконка користувача -->
+                <a href="register.html" class="user-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24">
+                        <g fill="none" fill-rule="evenodd">
+                            <path
+                                d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                            <path fill="#FDC92F"
+                                d="M16 14a5 5 0 0 1 4.995 4.783L21 19v1a2 2 0 0 1-1.85 1.995L19 22H5a2 2 0 0 1-1.995-1.85L3 20v-1a5 5 0 0 1 4.783-4.995L8 14zm0 2H8a3 3 0 0 0-2.995 2.824L5 19v1h14v-1a3 3 0 0 0-2.824-2.995zM12 2a5 5 0 1 1 0 10a5 5 0 0 1 0-10m0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6" />
+                        </g>
+                    </svg>
+                </a>
+
+                <a href="#" class="btn btn-primary">Підтримати</a>
+                <div class="lang-switch">UA</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ГОЛОВНА СЕКЦІЯ (HERO) -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Підтримай важливе<br>та отримай подарунок!</h1>
+                    <p>Долучайся до перевірених зборів та допомагай тим, хто цього потребує. Донать та забирай
+                        ексклюзивні подарунки від наших партнерів. Або стань спонсором сам — віддай свою річ чи послугу,
+                        щоб допомогти зібрати ще більше!"</p>
+                    <div class="hero-buttons">
+                        <a href="campaigns.html" class="btn btn-primary btn-icon">
+                            Підтримати збір
+                            <img src="images/lucide--arrow-right.svg" alt="Стрілка" class="arrow-icon">
+                        </a>
+                        <a href="about.html" class="btn btn-outline">Дізнатись більше</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Головна ілюстрація -->
+                    <img src="images/cuate.svg" alt="Ілюстрація: люди збирають серця у банку">
+                </div>
+            </div>
+        </section>
+
+        <!-- БЛОК СТАТИСТИКИ -->
+        <div class="stats-wrapper">
+            <div class="container">
+                <div class="stats-bar">
+
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <svg  class="stat-svg" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" />
+                                <path
+                                    d="M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2m2.993 11.75l2.747-2.815a1.9 1.9 0 0 0 0-2.632a1.775 1.775 0 0 0-2.56 0l-.183.188l-.183-.189a1.775 1.775 0 0 0-2.56 0a1.9 1.9 0 0 0 0 2.632l2.738 2.825z" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <h3>248</h3>
+                        <p>Активних зборів</p>
+                    </div>
+                </div>
+
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <svg  class="stat-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <path d="M15 11v.01M5.173 8.378a3 3 0 1 1 4.656-1.377" />
+                                    <path
+                                        d="M16 4v3.803A6.02 6.02 0 0 1 18.658 11h1.341a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-1.342c-.336.95-.907 1.8-1.658 2.473V19.5a1.5 1.5 0 0 1-3 0v-.583a6 6 0 0 1-1 .083h-4a6 6 0 0 1-1-.083v.583a1.5 1.5 0 0 1-3 0v-2.027A6 6 0 0 1 8.999 7h2.5z" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <h3>12 540 000₴</h3>
+                            <p>Зібрано загалом</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <svg  class="stat-svg" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" >
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0-8 0M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2m1-17.87a4 4 0 0 1 0 7.75M21 21v-2a4 4 0 0 0-3-3.85" />
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <h3>18 732</h3>
+                            <p>Користувачів</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <svg  class="stat-svg" xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 24 24">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <path d="M3 9a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1zm9-1v13" />
+                                    <path
+                                        d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7m2.5-4a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5a2.5 2.5 0 0 1 0 5" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <h3>512</h3>
+                            <p>Винагород</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- БЛОК Популярні збори -->
+        <section class="popular-collections">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Популярні збори</h2>
+                    <a href="campaigns.html" class="view-all">Переглянути все →</a>
+                </div>
+        
+                <div class="cards-grid">
+                    <!-- Картка 1 -->
+                    <div class="card">
+                        <img src="images/drone.jpg" alt="Збір" class="card-img">
+                        <!-- <span class="badge">Для ЗСУ</span>-->
+                        <div class="card-content">
+                            <h3>Дрони для ЗСУ</h3>
+                            <p>Збираємо на дрони Mavic 3 для розвідки та виконання бойових дій</p>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="fill" style="width: 75%;"></div>
+                                </div>
+                                <span class="progress-percent">75%</span>
+                            </div>
+                            
+                            <!-- Нижня частина зі статистикою -->
+                            <div class="card-footer">
+                                <div class="raised-info">
+                                    зібрано <b>375 000₴</b> з 500 000₴ 
+                                </div>
+                                <div class="arrow-icon">↗</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Повтори цей блок card ще 2 рази для інших карток -->
+                    <!-- Картка 2 -->
+                    <div class="card">
+                        <img src="images/picab.jpg" alt="Збір" class="card-img">
+                        <!-- <span class="badge">Для ЗСУ</span>-->
+                        <div class="card-content">
+                            <h3>Дрони для ЗСУ</h3>
+                            <p>Збираємо на дрони Mavic 3 для розвідки та виконання бойових дій</p>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="fill" style="width: 75%;"></div>
+                                </div>
+                                <span class="progress-percent">75%</span>
+                            </div>
+                            
+                            <!-- Нижня частина зі статистикою -->
+                            <div class="card-footer">
+                                <div class="raised-info">
+                                    зібрано <b>375 000₴</b> з 500 000₴ 
+                                </div>
+                                <div class="arrow-icon">↗</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Картка 3 -->
+                    <div class="card">
+                        <img src="images/medical.jpg" alt="Збір" class="card-img">
+                    <!-- <span class="badge">Для ЗСУ</span>-->
+                        <div class="card-content">
+                            <h3>Дрони для ЗСУ</h3>
+                            <p>Збираємо на дрони Mavic 3 для розвідки та виконання бойових дій</p>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="fill" style="width: 75%;"></div>
+                                </div>
+                                <span class="progress-percent">75%</span>
+                            </div>
+                    
+                            <!-- Нижня частина зі статистикою -->
+                            <div class="card-footer">
+                                <div class="raised-info">
+                                    зібрано <b>375 000₴</b> з 500 000₴
+                                </div>
+                                <div class="arrow-icon">↗</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+         
+        <!-- БЛОК Як це працює -->
+        <section class="how-it-works">
+            <div class="container">
+                <h2>Як це працює?</h2>
+        
+                <!-- Кроки -->
+                <div class="steps-grid">
+                    <!-- Крок 1 -->
+                    <div class="step">
+                        <div class="step-icon">
+                            <svg width="60" height="60" viewBox="0 0 99 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M64.1561 64.1562C66.8606 61.4518 69.0059 58.2411 70.4695 54.7076C71.9331 51.174 72.6865 47.3868 72.6865 43.5621C72.6865 39.7375 71.9331 35.9503 70.4695 32.4167C69.0059 28.8832 66.8606 25.6725 64.1561 22.9681C61.4517 20.2636 58.241 18.1183 54.7075 16.6547C51.1739 15.1911 47.3867 14.4377 43.5621 14.4377C39.7374 14.4377 35.9502 15.1911 32.4166 16.6547C28.8831 18.1183 25.6724 20.2636 22.968 22.9681C17.5061 28.43 14.4377 35.8379 14.4377 43.5621C14.4377 51.2864 17.5061 58.6943 22.968 64.1562C28.4299 69.6181 35.8378 72.6865 43.5621 72.6865C51.2863 72.6865 58.6942 69.6181 64.1561 64.1562ZM64.1561 64.1562L82.5 82.5001"
+                                    stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3>1. Обери збір</h3>
+                        <p>Знайди збір, який ти хочеш підтримати або долучись до загального</p>
+                    </div>
+                
+                    
+                    
+                    <!-- Крок 2 -->
+                    <div class="step">
+                        <div class="step-icon">
+                            <svg width="60" height="60" viewBox="0 0 99 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M59.8125 41.25L59.6681 40.6766C59.118 38.4854 57.8524 36.5404 56.0718 35.1498C54.2912 33.7593 52.0975 33.0027 49.8382 33H47.685C45.9206 33.0005 44.2115 33.6154 42.8511 34.739C41.4908 35.8626 40.5641 37.4248 40.2303 39.1573C39.8965 40.8899 40.1763 42.6846 41.0218 44.2332C41.8673 45.7818 43.2256 46.9877 44.8635 47.6438L54.1365 51.3562C55.7744 52.0123 57.1327 53.2182 57.9782 54.7668C58.8237 56.3154 59.1035 58.1101 58.7697 59.8427C58.4359 61.5752 57.5092 63.1374 56.1489 64.261C54.7885 65.3846 53.0794 65.9995 51.315 66H49.1659C46.9059 65.9982 44.7113 65.242 42.9298 63.8514C41.1484 62.4608 39.8822 60.5153 39.3319 58.3234L39.1875 57.75M49.5 24.75V33M49.5 66V74.25M86.625 49.5C86.625 54.3753 85.6647 59.2029 83.799 63.7071C81.9333 68.2113 79.1987 72.304 75.7513 75.7513C72.304 79.1987 68.2113 81.9333 63.7071 83.799C59.2029 85.6647 54.3753 86.625 49.5 86.625C44.6247 86.625 39.7971 85.6647 35.2929 83.799C30.7887 81.9333 26.696 79.1987 23.2487 75.7513C19.8013 72.304 17.0667 68.2113 15.201 63.7071C13.3353 59.2029 12.375 54.3753 12.375 49.5C12.375 39.6538 16.2864 30.2109 23.2487 23.2487C30.2109 16.2864 39.6538 12.375 49.5 12.375C59.3462 12.375 68.789 16.2864 75.7513 23.2487C82.7136 30.2109 86.625 39.6538 86.625 49.5Z"
+                                    stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3>2. Зроби донат</h3>
+                        <p>Перекажи будь-яку комфортну суму. Усі платежі захищені...</p>
+                    </div>
+             
+                    
+                    <!-- Крок 3 -->
+                    <div class="step">
+                        <div class="step-icon">
+                            <svg width="60" height="60" viewBox="0 0 99 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M49.5 51.5625H18.5625V76.3125C18.5625 79.0475 19.649 81.6706 21.583 83.6045C23.5169 85.5385 26.14 86.625 28.875 86.625H49.5M49.5 51.5625V86.625M49.5 51.5625V33M49.5 51.5625H17.5312C15.8902 51.5625 14.3164 50.9106 13.156 49.7502C11.9956 48.5898 11.3438 47.016 11.3438 45.375V39.1875C11.3438 37.5465 11.9956 35.9727 13.156 34.8123C14.3164 33.6519 15.8902 33 17.5312 33H49.5M49.5 51.5625H80.4375V76.3125C80.4375 79.0475 79.351 81.6706 77.417 83.6045C75.4831 85.5385 72.86 86.625 70.125 86.625H49.5M49.5 51.5625H81.4688C83.1098 51.5625 84.6836 50.9106 85.844 49.7502C87.0044 48.5898 87.6562 47.016 87.6562 45.375V39.1875C87.6562 37.5465 87.0044 35.9727 85.844 34.8123C84.6836 33.6519 83.1098 33 81.4688 33H49.5M49.5 33V22.6875M49.5 33H39.1875C36.4525 33 33.8294 31.9135 31.8955 29.9795C29.9615 28.0456 28.875 25.4225 28.875 22.6875C28.875 19.9525 29.9615 17.3294 31.8955 15.3955C33.8294 13.4615 36.4525 12.375 39.1875 12.375C40.5418 12.375 41.8828 12.6417 43.1339 13.16C44.3851 13.6782 45.5219 14.4379 46.4795 15.3955C47.4371 16.3531 48.1968 17.4899 48.715 18.7411C49.2333 19.9922 49.5 21.3332 49.5 22.6875M49.5 33H59.8125C62.5475 33 65.1706 31.9135 67.1045 29.9795C69.0385 28.0456 70.125 25.4225 70.125 22.6875C70.125 19.9525 69.0385 17.3294 67.1045 15.3955C65.1706 13.4615 62.5475 12.375 59.8125 12.375C57.0775 12.375 54.4544 13.4615 52.5205 15.3955C50.5865 17.3294 49.5 19.9525 49.5 22.6875"
+                                    stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3>3. Обери подарунок</h3>
+                        <p>Якщо твій внесок досяг потрібної суми, отримай унікальну винагороду...</p>
+                    </div>
+                   
+            
+                    <!-- Крок 4 -->
+                    <div class="step">
+                        <div class="step-icon">
+                            <svg width="65" height="65" viewBox="0 0 95 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.1777 25.6382C17.8557 23.9602 19.8477 22.6291 22.0401 21.721C24.2324 20.8129 26.5822 20.3455 28.9552 20.3455C31.3282 20.3455 33.678 20.8129 35.8704 21.721C38.0628 22.6291 40.0548 23.9602 41.7327 25.6382L47.5 31.4055L53.2673 25.6382C56.6566 22.2494 61.2533 20.3458 66.0462 20.3462C70.8391 20.3465 75.4355 22.2509 78.8243 25.6402C82.2131 29.0295 84.1167 33.6262 84.1163 38.4191C84.1159 43.2119 82.2116 47.8084 78.8223 51.1972L73.055 56.9605L73.1065 57.012L47.5515 82.5709L47.5 82.5195L47.4486 82.5709L21.8936 57.012L21.945 56.9605L16.1777 51.1972C14.4991 49.5191 13.1676 47.5269 12.2591 45.3341C11.3506 43.1414 10.883 40.7912 10.883 38.4177C10.883 36.0442 11.3506 33.694 12.2591 31.5012C13.1676 29.3085 14.4991 27.3162 16.1777 25.6382Z"
+                                    stroke="white" stroke-width="4" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3>4. Залиш відгук</h3>
+                        <p>Отримав подарунок? Напиши відгук спонсору або залиш теплі слова...</p>
+                    </div>
+                </div>
+        
+                <!-- Секція спонсорів -->
+                <div class="sponsor-section">
+                    <h2>Винагороди від спонсорів</h2>
+                    <p>Будь-хто може стати спонсором та пожертвувати свою річ на благо</p>
+                    <div class="sponsor-buttons">
+                        <!-- Кнопка 1 -->
+                        <a href="register.html" class="btn btn-outline">Стати спонсором</a>
+                    
+                        <!-- Кнопка 2 -->
+                        <a href="gifts.html" class="btn btn-primary">Каталог подарунків →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- БЛОК ГАЛЕРЕЯ -->  
+        <section class="gifts-gallery">
+            <div class="container">
+                <!-- Обов'язково клас swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+        
+                        <!-- Один слайд -->
+                        <div class="swiper-slide">
+                            <div class="gift-card">
+                                <img src="images/stikers.jpg" alt="Стікер-пак">
+                                <div class="gift-info">
+                                    <h4>Стікер-пак</h4>
+                                    <p>Майстерня тепла</p>
+                                    <div class="price-row"><b>Від 100₴</b> <span>↗</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Кінець слайда -->
+
+                        <!-- 2 слайд -->
+                        <div class="swiper-slide">
+                            <div class="gift-card">
+                                <img src="images/braslete.jpg" alt="Браслет">
+                                <div class="gift-info">
+                                    <h4>Браслет</h4>
+                                    <p>Барвистий світ</p>
+                                    <div class="price-row"><b>Від 200₴</b> <span>↗</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Кінець слайда 2 -->
+
+                        <!-- 3 слайд -->
+                        <div class="swiper-slide">
+                            <div class="gift-card">
+                                <img src="images/candle.jpg" alt="Свічка">
+                                <div class="gift-info">
+                                    <h4>Свічка</h4>
+                                    <p>Майстерня тепла</p>
+                                    <div class="price-row"><b>Від 300₴</b> <span>↗</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Кінець слайда 3 -->
+
+                        <!-- 4 слайд -->
+                        <div class="swiper-slide">
+                            <div class="gift-card">
+                                <img src="images/vyshyvanka.jpg" alt="Вишиванка">
+                                <div class="gift-info">
+                                    <h4>Вишиванка ручної роботи</h4>
+                                    <p>Веснянка</p>
+                                    <div class="price-row"><b>Від 2000₴</b> <span>↗</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Кінець слайда 4 -->
+
+                        <!-- 5 слайд -->
+                        <div class="swiper-slide">
+                            <div class="gift-card">
+                                <img src="images/flag.jpg" alt="Прапор">
+                                <div class="gift-info">
+                                    <h4>Підписаний прапор</h4>
+                                    <p>Благодійний фонд</p>
+                                    <div class="price-row"><b>Від 1000₴</b> <span>↗</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Кінець слайда 5 -->
+        
+                    </div>
+        
+                    <!-- Кнопки навігації (вони мають бути всередині контейнера swiper) -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Банер (Верхня частина) -->
+    <section class="footer-banner">
+        <div class="container banner-content">
+            <!-- ЛІВА ЧАСТИНА: Текст і кнопка -->
+            <div class="banner-text">
+                <h2>Разом ми зможемо більше!</h2>
+                <p>Кожен внесок важливий. Підтримуй, отримуй винагороди та допомагай змінювати світ на краще.</p>
+                <a href="#" class="btn btn-primary">Підтримати збір →</a>
+            </div>
+    
+            <!-- ПРАВА ЧАСТИНА: Картинка -->
+            <div class="banner-image">
+                <img src="images/hands-footer.png" alt="Руки">
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Футер (Нижня частина) -->
+    <footer class="footer">
+        <div class="container footer-grid">
+    
+            <div class="footer-logo">
+                <div class="logo-group">
+                    <img src="images/logo-white.png" alt="Лого" class="footer-logo-img">
+                    <div class="logo-text">
+                        <h3>Vdyachno</h3>
+                        <p>Разом зможемо більше</p>
+                    </div>
+                </div>
+    
+                <!-- Соцмережі через SVG код -->
+                <div class="socials">
+                    <a href="https://www.instagram.com/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M13.028 2c1.125.003 1.696.009 2.189.023l.194.007c.224.008.445.018.712.03c1.064.05 1.79.218 2.427.465c.66.254 1.216.598 1.772 1.153a4.9 4.9 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.012.266.022.487.03.712l.006.194c.015.492.021 1.063.023 2.188l.001.746v1.31a79 79 0 0 1-.023 2.188l-.006.194c-.008.225-.018.446-.03.712c-.05 1.065-.22 1.79-.466 2.428a4.9 4.9 0 0 1-1.153 1.772a4.9 4.9 0 0 1-1.772 1.153c-.637.247-1.363.415-2.427.465l-.712.03l-.194.006c-.493.014-1.064.021-2.189.023l-.746.001h-1.309a78 78 0 0 1-2.189-.023l-.194-.006a63 63 0 0 1-.712-.031c-1.064-.05-1.79-.218-2.428-.465a4.9 4.9 0 0 1-1.771-1.153a4.9 4.9 0 0 1-1.154-1.772c-.247-.637-.415-1.363-.465-2.428l-.03-.712l-.005-.194A79 79 0 0 1 2 13.028v-2.056a79 79 0 0 1 .022-2.188l.007-.194c.008-.225.018-.446.03-.712c.05-1.065.218-1.79.465-2.428A4.9 4.9 0 0 1 3.68 3.678a4.9 4.9 0 0 1 1.77-1.153c.638-.247 1.363-.415 2.428-.465c.266-.012.488-.022.712-.03l.194-.006a79 79 0 0 1 2.188-.023zM12 7a5 5 0 1 0 0 10a5 5 0 0 0 0-10m0 2a3 3 0 1 1 .001 6a3 3 0 0 1 0-6m5.25-3.5a1.25 1.25 0 0 0 0 2.5a1.25 1.25 0 0 0 0-2.5" />
+                        </svg></a>
+    
+                    <a href="https://www.facebook.com/?locale=uk_UA"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M15.402 21v-6.966h2.333l.349-2.708h-2.682V9.599c0-.784.218-1.319 1.342-1.319h1.434V5.857a19 19 0 0 0-2.09-.107c-2.067 0-3.482 1.262-3.482 3.58v1.996h-2.338v2.708h2.338V21H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1z" />
+                        </svg></a>
+    
+                    <a href="https://www.youtube.com/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M12.244 4c.534.003 1.87.016 3.29.073l.504.022c1.429.067 2.857.183 3.566.38c.945.266 1.687 1.04 1.938 2.022c.4 1.56.45 4.602.456 5.339l.001.152v.174c-.007.737-.057 3.78-.457 5.339c-.254.985-.997 1.76-1.938 2.022c-.709.197-2.137.313-3.566.38l-.504.023c-1.42.056-2.756.07-3.29.072l-.235.001h-.255c-1.13-.007-5.856-.058-7.36-.476c-.944-.266-1.687-1.04-1.938-2.022c-.4-1.56-.45-4.602-.456-5.339v-.326c.006-.737.056-3.78.456-5.339c.254-.985.997-1.76 1.939-2.021c1.503-.419 6.23-.47 7.36-.476zM9.999 8.5v7l6-3.5z" />
+                        </svg></a>
+    
+                    <a href="https://web.telegram.org/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M2.148 11.81q7.87-3.429 10.497-4.522c4.999-2.079 6.037-2.44 6.714-2.452c.15-.003.482.034.698.21c.182.147.232.347.256.487s.054.459.03.708c-.27 2.847-1.443 9.754-2.04 12.942c-.252 1.348-.748 1.8-1.23 1.845c-1.045.096-1.838-.69-2.85-1.354c-1.585-1.039-2.48-1.686-4.018-2.699c-1.777-1.171-.625-1.815.388-2.867c.265-.275 4.87-4.464 4.96-4.844c.01-.048.021-.225-.084-.318c-.105-.094-.26-.062-.373-.036q-.239.054-7.592 5.018q-1.079.74-1.952.721c-.643-.014-1.88-.363-2.798-.662c-1.128-.367-2.024-.56-1.946-1.183q.061-.486 1.34-.994" />
+                        </svg></a>
+    
+                </div>
+            </div>
+    
+    
+            <div class="footer-links">
+                <h4>Меню</h4>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="about.html">Про нас</a></li>
+                    <li><a href="campaigns.html">Збори</a></li>
+                    <li><a href="gifts.html">Подарунки</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-links">
+                <h4>Підтримка</h4>
+                <ul>
+                    <li><a href="#">Контакти</a></li>
+                    <li><a href="#">Правила</a></li>
+                    <li><a href="#">Політика кофідеційності</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom container">
+            <p>© 2024 Vdyachno. Усі права захищені. Розроблено як кваліфікаційна робота.</p>
+            <div class="lang-selector">Українська ▾</div>
+        </div>
+    </footer>
+
+<script>
+    // Це змінна, яка імітує вхід. 
+    // Коли зробиш бекенд, тут буде перевірка сесії (true/false)
+    let isUserLoggedIn = false;
+
+    function handleSupportClick() {
+        if (isUserLoggedIn) {
+            openPopup(); // Відкриваємо попап, якщо увійшов
+        } else {
+            window.location.href = 'register.html'; // Перекидаємо на реєстрацію, якщо ні
+        }
+    }
+
+    function openPopup() {
+        document.getElementById('support-popup').style.display = 'flex';
+    }
+    function closePopup() {
+        document.getElementById('support-popup').style.display = 'none';
+    }
+</script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4, // Скільки карток показувати
+        spaceBetween: 20, // Відстань між ними
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+</body>
+
+</html>
