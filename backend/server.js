@@ -17,7 +17,7 @@ app.use(express.json());
 app.use("/api/fundraisers", fundraiserRoutes);
 app.use("/api/gifts", giftRoutes);
 app.use("/api/auth", require("./routes/auth"));
-app.use("/api/users", require("./routes/user"));
+app.use("/api/users", require("./routes/User"));
 app.use("/api/donations", require("./routes/donations"));
 
 // Статика
