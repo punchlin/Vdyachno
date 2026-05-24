@@ -212,7 +212,7 @@ let currentDonationId = null;
 
         try {
 
-            const response = await fetch("http://localhost:5000/api/gifts/approved");
+            const response = await fetch("/api/gifts/approved");
 
             if (!response.ok) {
                 console.error("Failed to load gifts");
@@ -269,7 +269,7 @@ function selectAmount(amount) {
         }
 
         const response = await fetch(
-            `http://localhost:5000/api/fundraisers/${currentFundraiserId}/donate`,
+            `/api/fundraisers/${currentFundraiserId}/donate`,
             {
                 method: "PUT",
                 headers: {
@@ -304,7 +304,7 @@ function selectAmount(amount) {
 
     async function loadCampaigns() {
         try {
-            const response = await fetch("http://localhost:5000/api/fundraisers/approved");
+            const response = await fetch("/api/fundraisers/approved");
             allCampaigns = await response.json();
             renderCampaigns(allCampaigns);
         } catch (error) {
@@ -385,7 +385,7 @@ function selectAmount(amount) {
             try {
 
                 const response = await fetch(
-                    `http://localhost:5000/api/donations/${currentDonationId}/select-gift`,
+                    `/api/donations/${currentDonationId}/select-gift`,
                     {
                         method: "PUT",
                         headers: {
@@ -443,7 +443,7 @@ function selectAmount(amount) {
 
                 const cleanedImage = g.image ? g.image.trim() : null;
 
-                const imageUrl = `http://localhost:5000${g.image}`;
+                const imageUrl = `${g.image}`;
                 
                 const card = document.createElement("div");
                 card.className = "gift-card";
@@ -515,7 +515,7 @@ function selectAmount(amount) {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/api/users/me", {
+            const response = await fetch("/api/users/me", {
                 headers: {
                     Authorization: "Bearer " + token
                 }
@@ -527,7 +527,7 @@ function selectAmount(amount) {
             if (user.avatar) {
                 profileLink.innerHTML = `
                 <img 
-                    src="http://localhost:5000${user.avatar}" 
+                    src="${user.avatar}" 
                     class="header-avatar"
                 >
             `;

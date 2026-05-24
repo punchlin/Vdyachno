@@ -201,7 +201,7 @@
 
         async function loadUser() {
             try {
-                const response = await fetch("http://localhost:5000/api/users/me", {
+                const response = await fetch("/api/users/me", {
                     headers: {
                         Authorization: "Bearer " + token
                     }
@@ -220,7 +220,7 @@
                 // Аватар
                 if (user.avatar) {
                     document.getElementById("avatarImage").src =
-                        `http://localhost:5000${user.avatar}`;
+                        `${user.avatar}`;
                 }
 
                 if (user.deliveryAddress) {
@@ -250,7 +250,7 @@
             formData.append("avatar", this.files[0]);
 
             try {
-                await fetch("http://localhost:5000/api/users/avatar", {
+                await fetch("/api/users/avatar", {
                     method: "PUT",
                     headers: {
                         Authorization: "Bearer " + token
@@ -271,7 +271,7 @@
 
                 const token = localStorage.getItem("token");
 
-                const response = await fetch("http://localhost:5000/api/donations/my", {
+                const response = await fetch("/api/donations/my", {
                     headers: {
                         Authorization: "Bearer " + token
                     }

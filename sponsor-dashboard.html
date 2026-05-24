@@ -280,7 +280,7 @@
         async function loadUser() {
                 const token = localStorage.getItem("token");
 
-                const response = await fetch("http://localhost:5000/api/users/me", {
+                const response = await fetch("/api/users/me", {
                     headers: {
                         Authorization: "Bearer " + token
                     }
@@ -338,7 +338,7 @@
 
                         const token = localStorage.getItem("token");
 
-                        const response = await fetch("http://localhost:5000/api/users/avatar", {
+                        const response = await fetch("/api/users/avatar", {
                             method: "PUT",
                             headers: {
                                 Authorization: "Bearer " + token
@@ -375,7 +375,7 @@
                         formData.append("category", category);
                         formData.append("image", imageFile);
 
-                        const response = await fetch("http://localhost:5000/api/gifts", {
+                        const response = await fetch("/api/gifts", {
                             method: "POST",
                             headers: {
                                 Authorization: "Bearer " + token
@@ -419,14 +419,14 @@
                 container.innerHTML = "";
 
                 // 1️⃣ Отримуємо подарунки спонсора
-                const giftsRes = await fetch("http://localhost:5000/api/gifts/my", {
+                const giftsRes = await fetch("/api/gifts/my", {
                     headers: { Authorization: "Bearer " + token }
                 });
 
                 const gifts = await giftsRes.json();
 
                 // 2️⃣ Отримуємо замовлення
-                const ordersRes = await fetch("http://localhost:5000/api/donations/sponsor-orders", {
+                const ordersRes = await fetch("/api/donations/sponsor-orders", {
                     headers: { Authorization: "Bearer " + token }
                 });
 
@@ -447,7 +447,7 @@
                         card.innerHTML = `
                         <article class="gift-item pending">
                             <div class="gift-image">
-                                <img src="http://localhost:5000${g.image}" alt="${g.title}">
+                                <img src="${g.image}" alt="${g.title}">
                                 <span class="badge badge-orange">На розгляді</span>
                             </div>
 
@@ -465,7 +465,7 @@
                         card.innerHTML = `
                         <article class="gift-item rejected">
                             <div class="gift-image">
-                                <img src="http://localhost:5000${g.image}" alt="${g.title}">
+                                <img src="${g.image}" alt="${g.title}">
                                 <span class="badge badge-red">Відхилено</span>
                             </div>
 
@@ -483,7 +483,7 @@
                         card.innerHTML = `
                         <article class="gift-item ordered">
                             <div class="gift-image">
-                                <img src="http://localhost:5000${g.image}" alt="${g.title}">
+                                <img src="${g.image}" alt="${g.title}">
                                 <span class="badge badge-green">Замовлено</span>
                             </div>
 
@@ -505,7 +505,7 @@
                         card.innerHTML = `
                         <article class="gift-item approved">
                             <div class="gift-image">
-                                <img src="http://localhost:5000${g.image}" alt="${g.title}">
+                                <img src="${g.image}" alt="${g.title}">
                                 <span class="badge badge-green">Схвалено</span>
                             </div>
 

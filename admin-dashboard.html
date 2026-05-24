@@ -205,7 +205,7 @@
     <!-- Скрипт для ефекту (кнопки реально працюватимуть!) -->
     <script>
         async function loadPendingFundraisers() {
-            const response = await fetch("http://localhost:5000/api/fundraisers/pending");
+            const response = await fetch("/api/fundraisers/pending");
             const fundraisers = await response.json();
 
             const container = document.querySelector(".moderation-list");
@@ -221,7 +221,7 @@
         <div style="display:flex; gap:16px; align-items:flex-start;">
 
         <!-- КАРТИНКА ЗБОРУ -->
-        <img src="http://localhost:5000${f.image}" 
+        <img src="${f.image}" 
              style="width:120px; height:90px; object-fit:cover; border-radius:10px;">
 
         <div style="flex:1;">
@@ -232,7 +232,7 @@
             <p><strong>Ціль:</strong> ${f.goal} ₴</p>
 
             <div style="display:flex; align-items:center; gap:10px; margin:8px 0;">
-                <img src="http://localhost:5000${f.createdBy?.avatar || ''}" 
+                <img src="${f.createdBy?.avatar || ''}" 
                      style="width:40px; height:40px; border-radius:50%; object-fit:cover;">
                 <span><strong>${f.createdBy?.firstName || "Невідомо"}</strong></span>
             </div>
@@ -260,7 +260,7 @@
         }
 
         async function loadPendingGifts() {
-                const response = await fetch("http://localhost:5000/api/gifts/pending");
+                const response = await fetch("/api/gifts/pending");
                 const gifts = await response.json();
 
                 const container = document.getElementById("giftsContainer");
@@ -274,7 +274,7 @@
         <div class="mod-info">
             <div style="display:flex; gap:16px; align-items:flex-start;">
 
-                <img src="http://localhost:5000${g.image}" 
+                <img src="${g.image}" 
                      style="width:120px; height:90px; object-fit:cover; border-radius:10px;">
 
                 <div style="flex:1;">
@@ -285,7 +285,7 @@
                     <p><strong>Вартість:</strong> ${g.value} ₴</p>
 
                     <div style="display:flex; align-items:center; gap:10px; margin:8px 0;">
-                        <img src="http://localhost:5000${g.createdBy?.avatar || ''}" 
+                        <img src="${g.createdBy?.avatar || ''}" 
                              style="width:40px; height:40px; border-radius:50%; object-fit:cover;">
                         <span><strong>${g.createdBy?.companyName || "Спонсор"}</strong></span>
                     </div>
@@ -311,7 +311,7 @@
             }
 
             async function approveGift(id) {
-                await fetch(`http://localhost:5000/api/gifts/${id}/approve`, {
+                await fetch(`/api/gifts/${id}/approve`, {
                     method: "PUT"
     });
 
@@ -320,7 +320,7 @@
 }
 
             async function rejectGift(id) {
-                await fetch(`http://localhost:5000/api/gifts/${id}/reject`, {
+                await fetch(`/api/gifts/${id}/reject`, {
                     method: "PUT"
     });
 
@@ -328,7 +328,7 @@
             loadPendingGifts();
 }
         async function approveFundraiser(id) {
-                await fetch(`http://localhost:5000/api/fundraisers/${id}/approve`, {
+                await fetch(`/api/fundraisers/${id}/approve`, {
                     method: "PUT"
                  });
 
@@ -337,7 +337,7 @@
             }
 
         async function rejectFundraiser(id) {
-            await fetch(`http://localhost:5000/api/fundraisers/${id}/reject`, {
+            await fetch(`/api/fundraisers/${id}/reject`, {
                 method: "PUT"
         });
         alert("Збір відхилено");
